@@ -1,0 +1,808 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap"); /*font-family: 'Noto Sans KR', sans-serif;*/
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"); /*font-family: 'Cormorant Garamond', serif;*/
+
+@font-face {
+  font-family: "IBMPlexSansKR-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Chosunilbo_myungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 1920px;
+  overflow-x: hidden;
+  font-family: "IBMPlexSansKR-Regular";
+  font-size: 16px;
+  color: #222;
+  background: #d5d0ca; /*#fefefe*/
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #222;
+  font-family: "IBMPlexSansKR-Regular";
+}
+
+/*header*/
+header {
+  position: relative;
+  width: 1920px;
+  height: 100vh;
+  overflow: hidden;
+}
+header h1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  z-index: 10;
+}
+header h1 a {
+  position: absolute;
+  display: block;
+  width: 100%;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: #ccc;
+  line-height: 1;
+  font-size: 25px;
+}
+
+header #headerImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  transform: scale(1.1);
+  animation: headerImg 1s ease-in-out forwards;
+}
+header #headerText {
+  width: 100%;
+  height: 100vh;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 90px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 250px;
+  color: #fff;
+  background: #000;
+  mix-blend-mode: multiply;
+  opacity: 0;
+  animation: fadeInText 1.5s 1s ease-in-out forwards;
+}
+header #headerText em {
+  font-size: 120px;
+}
+header #headerText b {
+  font-size: 120px;
+}
+header #headerText span {
+  font-size: 130px;
+  color: #000;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+header #headerSpan {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 30px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInText2 1.5s 1s ease-in forwards;
+}
+
+@keyframes headerImg {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInText {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*section1*/
+#section1 {
+  position: relative;
+  width: 1920px;
+  height: 2500px;
+}
+#section1 #title1 {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1070px;
+  height: 120px;
+  background: #d5d0ca;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+#section1 #title2 {
+  position: absolute;
+  top: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  font-size: 130px;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+}
+#section1 #title2::after {
+  display: block;
+  position: absolute;
+  content: "01";
+  top: 0;
+  right: 5px;
+  font-size: 16px;
+}
+
+#section1 #introBox {
+  position: absolute;
+  top: 700px;
+  width: 100%;
+  height: 800px;
+  opacity: 0;
+  transition: all 1s;
+}
+#section1 #introBox.visible {
+  opacity: 1;
+  bottom: 0;
+}
+
+#section1 #introBox #sec1-1 {
+  position: absolute;
+  left: 0;
+  width: 960px;
+  height: 100%;
+}
+#section1 #introBox #sec1-2 {
+  position: absolute;
+  left: 960px;
+  width: 1000px;
+  height: 200%;
+}
+
+#section1 #introBox #sec1-1 #sec1-1box1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 100%;
+}
+/* #section1 #introBox #sec1-1 #sec1-1box1::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 750px;
+  background: #ccc5bc;
+} */
+#section1 #introBox #sec1-1 #sec1-1box1 img {
+  display: block;
+  width: 400px;
+  margin: 100px 0 100px 70px;
+  border-radius: 180px;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 {
+  position: absolute;
+  top: 0;
+  left: 480px;
+  width: 480px;
+  height: 100%;
+  padding: 50px 40px;
+  box-sizing: border-box;
+}
+#section1 #introBox #sec1-1 #sec1-1box2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 750px;
+  background: #ccc5bc;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 .name {
+  margin: 30px 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 .name::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 40px;
+  z-index: -1;
+  background: #ccc5bc;
+  width: 185px;
+  height: 25px;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 .category {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #333;
+}
+
+#section1 #introBox #sec1-1 #sec1-1box2 ul {
+  margin: 20px 0;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul li {
+  margin: 10px 0;
+  padding-left: 35px;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: #333;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li {
+  position: relative;
+  margin: 15px 0;
+  padding-left: 40px;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li::before {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li:nth-child(1):before {
+  background: url(../images/HTML5_logo_re.png) center center;
+  background-size: 100%;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li:nth-child(2):before {
+  background: url(../images/CSS3_logo_re.png) center center;
+  background-size: 100%;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li:nth-child(3):before {
+  background: url(../images/JavaScript_logo_re.png) center center;
+  background-size: 100%;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li:nth-child(4):before {
+  background: url(../images/Photoshop_icon_re.png) center center;
+  background-size: 100%;
+}
+#section1 #introBox #sec1-1 #sec1-1box2 ul.skill li:nth-child(5):before {
+  background: url(../images/Illustrator_icon_re.png) center center;
+  background-size: 100%;
+}
+
+#section1 #introBox #sec1-2 .sec1-2Intro {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  color: #588d7d; /*#8e8a86;*/
+}
+#section1 #introBox #sec1-2 .sec1-2Intro1 {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  font-size: 170px;
+  line-height: 1;
+}
+#section1 #introBox #sec1-2 .sec1-2Intro1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 70px;
+  right: 260px;
+  width: 200px;
+  height: 200px;
+  background: url(../images/20220711.png) no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+#section1 #introBox #sec1-2 .sec1-2Intro1 #highlight1 {
+  position: absolute;
+  display: block;
+  top: 270px;
+  left: 140px;
+  width: 0px;
+  height: 50px;
+  z-index: -1;
+  background: #ccc5bc;
+}
+#section1 #introBox #sec1-2 .sec1-2Intro2 {
+  position: relative;
+  bottom: -500px;
+  margin-bottom: 80px;
+  font-size: 140px;
+  opacity: 0;
+  transition: all 1s;
+}
+#section1 #introBox #sec1-2 .sec1-2Intro2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  right: 40%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: url(../images/iconsWoman.png) no-repeat center center;
+  z-index: -1;
+}
+#section1 #introBox #sec1-2 .sec1-2Intro2.visible {
+  opacity: 1;
+  bottom: 0;
+}
+
+#section1 #introBox #sec1-2 .sec1-2Cont {
+  font-family: "Chosunilbo_myungjo";
+  opacity: 0;
+  transition: all 0.5s;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont.visible {
+  opacity: 1;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont1 {
+  position: relative;
+  top: 30px;
+  left: 400px;
+  width: 250px;
+  font-size: 40px;
+  line-height: 1.8;
+  text-align: right;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont2 {
+  position: relative;
+  top: -120px;
+  left: 130px;
+  width: 330px;
+  font-size: 19px;
+  text-align: center;
+  line-height: 1.8;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont2::before {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  content: "{";
+  display: block;
+  font-size: 80px;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont2::after {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  content: "}";
+  display: block;
+  font-size: 80px;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont3 {
+  position: relative;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.8;
+}
+#section1 #introBox #sec1-2 .sec1-2Cont3 #highlight2 {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 230px;
+  content: "";
+  width: 0px;
+  height: 20px;
+  z-index: -1;
+  background: #ccc5bc;
+}
+
+/*section2*/
+#section2 {
+  position: relative;
+  top: 0px;
+  width: 1920px;
+  height: 4100px;
+}
+#section2 #title3 {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 630px;
+  height: 120px;
+  background: #d5d0ca;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+#section2 #title4 {
+  position: absolute;
+  top: 380px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  font-size: 130px;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+}
+#section2 #title4::after {
+  display: block;
+  position: absolute;
+  content: "02";
+  top: 0;
+  right: 5px;
+  font-size: 16px;
+}
+
+#section2 #sec2wrap {
+  position: absolute;
+  top: 750px;
+  left: 0;
+  width: 1920px;
+  height: 975px;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  overflow: hidden;
+}
+#section2 #sec2wrap #sec2con {
+  width: 300%;
+  height: 100%;
+}
+#section2 #sec2wrap #sec2con::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#section2 #sec2wrap #sec2con .panel {
+  position: relative;
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+  /* background: #f1f2f6; */
+}
+#section2 #sec2wrap #sec2con .panel .panelTitle1 {
+  position: absolute;
+  top: 340px;
+  right: 210px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  transform: rotate(90deg);
+  font-family: "Cormorant Garamond", serif;
+}
+#section2 #sec2wrap #sec2con .panel .panelTitle2 {
+  position: absolute;
+  top: 110px;
+  left: 200px;
+  font-size: 180px;
+  font-weight: 700;
+  color: #d5d0ca;
+  text-shadow: -1px -1px 0 #ccc5bc, 1px -1px 0 #ccc5bc, -1px 1px 0 #ccc5bc,
+    1px 1px 0 #ccc5bc;
+  font-family: "Cormorant Garamond", serif;
+}
+#section2 #sec2wrap #sec2con .panel .panelTitle3 {
+  position: absolute;
+  top: 240px;
+  left: 370px;
+  font-size: 46px;
+  font-weight: 700;
+}
+#section2 #sec2wrap #sec2con .panel img {
+  position: absolute;
+  top: 250px;
+  right: 300px;
+  width: 650px;
+}
+#section2 #sec2wrap #sec2con .panel dl {
+  position: absolute;
+  top: 400px;
+  display: inline-block;
+  vertical-align: top;
+}
+#section2 #sec2wrap #sec2con .panel dl:nth-of-type(1) {
+  left: 250px;
+}
+#section2 #sec2wrap #sec2con .panel dl:nth-of-type(2) {
+  left: 620px;
+}
+#section2 #sec2wrap #sec2con .panel dl:nth-of-type(3) {
+  top: 600px;
+  left: 250px;
+}
+#section2 #sec2wrap #sec2con .panel dl dt {
+  margin: 10px 0;
+  font-weight: 700;
+  font-size: 24px;
+  color: #444;
+}
+#section2 #sec2wrap #sec2con .panel dl dd {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666;
+}
+#section2 #sec2wrap #sec2con .panel button {
+  position: absolute;
+  bottom: 240px;
+  left: 620px;
+  width: 110px;
+  height: 110px;
+  background: none;
+  outline: none;
+  border: none;
+  transition: all 0.5s;
+  background: url(../images/icons_link.png) no-repeat center center;
+  background-color: #b4cbc4;
+  border-radius: 50%;
+}
+#section2 #sec2wrap #sec2con .panel button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 110px;
+  color: #000;
+}
+#section2 #sec2wrap #sec2con .panel button:hover {
+  background-color: #588d7d;
+}
+#section2 #sec2wrap #sec2con .panel button:hover a {
+  color: #f1f2f6;
+}
+
+#section2 #sec2wrap #sec2con .panel:nth-child(2) {
+  position: relative;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) .panelTitle1 {
+  position: absolute;
+  top: -850px;
+  left: -950px;
+  transform: rotate(-90deg);
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) .panelTitle2 {
+  position: absolute;
+  top: 110px;
+  left: 1000px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) .panelTitle3 {
+  position: absolute;
+  top: 240px;
+  left: 1100px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) img {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) dl {
+  position: absolute;
+  top: 400px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) dl:nth-of-type(1) {
+  left: 1050px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) dl:nth-of-type(2) {
+  left: 1400px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) dl:nth-of-type(3) {
+  top: 600px;
+  left: 1400px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) button {
+  left: 1060px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(2) button:nth-of-type(2) {
+  left: 1210px;
+}
+#section2 #sec2wrap #sec2con .panel:nth-child(3) .panelTitle1 {
+  top: 375px;
+  right: 170px;
+}
+
+/*section3*/
+#section3 {
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 1920px;
+  height: 1600px;
+}
+#section3 #title5 {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 690px;
+  height: 120px;
+  background: #d5d0ca;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+#section3 #title6 {
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  font-size: 130px;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+}
+#section3 #title6::after {
+  display: block;
+  position: absolute;
+  content: "03";
+  top: 0;
+  right: 5px;
+  font-size: 16px;
+}
+
+#section3 #sec3wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1920px;
+  height: 900px;
+  background: url(../images/sec3bg.jpg);
+}
+#section3 #sec3wrap #contact1 {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50% 50% 0 0;
+  background: #588d7d;
+}
+#section3 #sec3wrap #contact1 .contact1Box1 {
+  position: absolute;
+  top: 200px;
+  left: 220px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+#section3 #sec3wrap #contact1 .contact1Box1 dl {
+  display: inline-block;
+  margin-right: 50px;
+}
+#section3 #sec3wrap #contact1 .contact1Box1 dl dt {
+  display: block;
+  font-size: 14px;
+  color: #ccc;
+}
+#section3 #sec3wrap #contact1 .contact1Box1 dl dt::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #2c5f2d;
+}
+#section3 #sec3wrap #contact1 .contact1Box1 dl dd {
+  display: inline-block;
+  font-size: 16px;
+  color: #eee;
+}
+#section3 #sec3wrap #contact1 p {
+  position: absolute;
+  top: 330px;
+  left: 220px;
+  font-size: 18px;
+  color: #ddd;
+}
+#section3 #sec3wrap #contact1 p::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #2c5f2d;
+}
+#section3 #sec3wrap #contact1 p::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: url(../images/icons_email.png) no-repeat;
+  background-size: cover;
+}
+#section3 #sec3wrap #contact1 #contact-form {
+  position: absolute;
+  top: 450px;
+  left: 220px;
+  width: 500px;
+}
+#section3 #sec3wrap #contact1 #contact-form label {
+  display: inline-block;
+  width: 90px;
+  margin: 10px 10px 10px 0;
+  color: #ddd;
+  text-align: right;
+  font-size: 14px;
+}
+#section3 #sec3wrap #contact1 #contact-form label:nth-of-type(3) {
+  vertical-align: top;
+}
+#section3 #sec3wrap #contact1 #contact-form input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 10px;
+  outline: none;
+  background: none;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  color: #ddd;
+  font-family: "IBMPlexSansKR-Regular";
+}
+
+#section3 #sec3wrap #contact1 #contact-form input:focus {
+  border: 1px solid #2c5f2d;
+}
+#section3 #sec3wrap #contact1 #contact-form textarea {
+  width: 300px;
+  height: 250px;
+  margin-top: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  padding-left: 20px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 16px;
+  font-family: "IBMPlexSansKR-Regular";
+  background: none;
+  color: #ddd;
+}
+#section3 #sec3wrap #contact1 #contact-form textarea:focus {
+  border: 1px solid #2c5f2d;
+}
+#section3 #sec3wrap #contact1 #contact-form input[type="submit"] {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 70px;
+  padding-left: 0;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  color: #ddd;
+}
+#section3 #sec3wrap #contact1 #contact-form input[type="submit"]:hover {
+  border: 1px solid #2c5f2d;
+}

@@ -1,0 +1,246 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');/*font-family: 'Noto Sans KR', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap'); /*font-family: 'Hahmlet', serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');/*font-family: 'Gowun Dodum', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); /*font-family: 'Cormorant Garamond', serif;*/
+
+*{margin: 0; padding: 0;}
+html, body{max-width: 1920px; overflow-x: hidden;}
+body{font-family: 'Noto Sans KR','맑은 고딕','돋움', sans-serif; font-size: 15px; color: #222; background: #eaeaea;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none; color: #222;}
+
+/*header*/
+header{position: relative; width: 100%; height: 1080px; overflow: hidden;}
+header h1{position: absolute; top: 40px; left: 60px; font-weight: bold; font-size: 25px; font-family: 'Gowun Dodum', sans-serif; color: #347eb3;}
+header div{position: absolute; top: 50%; left: 50%; width: 1000px; height: 400px; transform: translate(-50%, -50%); text-align: center; }
+header div::before, header div::after{position: absolute; display: block; content:''; width: 600px; height: 600px; background: #eaeaea; box-shadow: 6px 6px 12px rgba(0,0,0,0.08),
+  -6px -6px 12px rgba(255,255,255,1);  border-radius: 50%; opacity: 0;}
+header div::before{bottom: 0px; left: -600px;  transform: translateY(35%); width: 500px; height: 500px; animation: headerani3 4s forwards;}
+header div::after{top: 900px; right: -600px; animation: headerani4 4s forwards;}
+header div p{position: relative; z-index: 5; font-family: 'Cormorant Garamond', serif; font-size: 70px; font-weight: 600; text-align: center; opacity: 0;  animation: headerani1 2.5s forwards; }
+header div p em{font-size: 85px; }
+header div p b{font-size: 85px;}
+header div p > span{font-size: 120px; color: #eaeaea; text-shadow: -1px -1px 0 #222, 1px -1px 0 #222, -1px 1px 0 #222, 1px 1px 0 #222; font-weight: bold;}
+header div > span{display: inline-block; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 30px; margin-top: -50px; opacity: 0; animation: headerani2 3s forwards;}
+
+@keyframes headerani1{
+  50%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes headerani2{
+  50%{
+    margin-top: 0px;
+    opacity: 0;
+  }
+  100%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes headerani3{
+  50%{
+    opacity: 0;
+    top: 300px;
+  }
+  100%{
+    opacity: 1;
+    top: 50px;
+  }
+}
+
+@keyframes headerani4{
+  50%{
+    opacity: 0;
+    top: -300px;
+  }
+  100%{
+    opacity: 1;
+    top: -400px;
+  }
+}
+
+/*section1*/
+.sec1{position: relative; height: 1080px;}
+.sec1 .cover{width: 100%; height: 200px; margin: 50px 0; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; line-height: 200px;}
+.sec1 .cover .first-parallel{text-transform: uppercase; font-size: 50px; color: #444; font-family: 'Gowun Dodum', sans-serif;}
+.sec1 .sec1Box1{position: absolute; top: 45%; left: 400px; font-size: 20px; line-height: 1.8;}
+.sec1 .sec1Box1 .sec1Text1{position: relative; z-index: 5;}
+.sec1 .sec1Box1 .sec1Text1 em{display: inline-block; font-size: 28px; font-style: normal; font-family: 'Gowun Dodum', sans-serif; animation: sec1Box1ani1 2s forwards;}
+.sec1 .sec1Box1 .sec1Text1 b{font-size: 22px; font-family: 'Gowun Dodum', sans-serif;}
+.sec1 .sec1Box1 .sec1Text1 span{font-size: 25px; font-family: 'Gowun Dodum', sans-serif;}
+.sec1 .sec1Box1Img{position: absolute; top: 45%; right: 300px; display: block;}
+.sec1 .sec1Box1Img.on{animation: sec1Box1ani1 2s forwards;}
+.sec1 .sec1Box1 .sec1Text2{position: absolute; top: 150px; right: -200px; font-family: 'Cormorant Garamond', serif; font-size: 200px; line-height: 1; color: rgba(52, 126, 179, 0.1); z-index: 1; opacity: 0;}
+.sec1 .sec1Box1 .sec1Text2.on{animation: sec1Box1ani2 2s forwards;}
+
+@keyframes sec1Box1ani1{
+  50%{top: 38%;}
+  100%{top: 40%;}
+}
+
+@keyframes sec1Box1ani2{
+  30%{opacity: 0; top: 150px;}
+  100%{opacity: 1; top: 50px;}
+}
+
+/*section2*/
+.sec2{position: relative; width: 100%; height: 2500px;}
+
+.sec2 > div{position: absolute; top: 150px; right: 150px; width: 500px; height: 500px;}
+.sec2 > div span{display: block; position: absolute; top: -45px; right: 60px; color: #eaeaea; font-family: 'Hahmlet', serif; font-size: 70px; z-index:-1; text-shadow: -1px -1px 0 #c7c7c7, 1px -1px 0 #c7c7c7, -1px 1px 0 #c7c7c7, 1px 1px 0 #c7c7c7;}
+.sec2 > div h3{margin: 20px 0; font-size: 30px; }
+.sec2 > div p{font-size: 18px; line-height: 1.8;}
+.sec2 > div button{width: 100px; height: 40px; margin-top: 50px; outline: none; border: 1px solid #ccc; border-radius: 25px; background: none;}
+.sec2 > div button a{display: block; width: 100%; height: 100%; line-height: 40px; font-size: 15px; transition: all 2s;}
+.sec2 > div button:hover{background: #235070;}
+.sec2 > div button:hover a{color: #fff;}
+
+/*.sec2box1-1,.sec2box1-2 */
+.sec2 .sec2Box1-1{position: absolute; top: 100px; left: -700px; width: 600px;}
+.sec2 .sec2Box1-1 img{width: 100%;}
+.sec2 .sec2Box1-1.on{animation: sec2Box1ani 3s forwards;}
+
+.sec2 .sec2Box1-2{position: absolute; top: 150px; right: 300px;}
+.sec2 .sec2Box1-2 span{display: block; position: absolute; top: -45px; right: 60px;}
+
+@keyframes sec2Box1ani{
+  50%{left: -700px;}
+  100%{left: 300px;}
+}
+
+/*.sec2box2-1,.sec2box2-2 */
+.sec2 .sec2Box2-1{position: absolute; top: 1000px; left: 300px; text-align: right;}
+.sec2 .sec2Box2-1 span{display: block; position: absolute; top: -90px; right: 60px; opacity: 0; }
+.sec2 .sec2Box2-1 span.on{animation: sec2Box2ani 3s forwards;}
+
+.sec2 .sec2Box2-2{position: absolute; top: 1000px; right: 300px; width: 600px;}
+.sec2 .sec2Box2-2 img{width: 100%;}
+
+@keyframes sec2Box2ani{
+  50%{
+    top: -100px;
+    opacity: 0;
+  }
+  100%{
+    top: -45px;
+    opacity: 1;
+  }
+}
+
+/*.sec2box3-1,.sec2box3-2 */
+.sec2 .sec2Box3-1{position: absolute; top: 1800px; left: -700px; width: 600px;}
+.sec2 .sec2Box3-1 img{width: 100%;}
+.sec2 .sec2Box3-1.on{animation: sec2Box3ani 3s forwards;}
+
+.sec2 .sec2Box3-2{position: absolute; top: 1800px; right: 300px;}
+.sec2 .sec2Box3-2 span{display: block; position: absolute; top: -45px; right: 60px;}
+
+@keyframes sec2Box3ani{
+  50%{left: -700px;}
+  100%{left: 300px;}
+}
+
+
+/*section3*/
+.sec3{position: relative; width: 100%; height: 1080px; overflow: hidden;}
+.aniArea{position: absolute; width: 100%; height: 800px; top: 0; left: 0;}
+.aniArea .circles{position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;}
+.aniArea .circles li{position: absolute; bottom: -150px; display: block; width: 20px; height: 20px; border-radius: 20%; border:1px solid #555; animation: sec3ani 35s linear infinite;}
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+.circles li:nth-child(6){
+  left: 75%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 3s;
+}
+.circles li:nth-child(7){
+  left: 35%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 6s;
+}
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 12s;
+  animation-duration: 42s;
+}
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 32s;
+}
+.circles li:nth-child(10){
+  left: 85%;
+  width: 120px;
+  height: 120px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+@keyframes sec3ani {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 30%;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.sec3::after{position: absolute; top: 400px; left: 50%; transform: translateX(-50%); display: block; content:''; width: 1800px; height: 1800px; background: #eaeaea; box-shadow: 6px 6px 12px rgba(0,0,0,0.08),-6px -6px 12px rgba(255,255,255,1); border-radius: 50% 50% 0 0;}
+#sec3Text1{position: absolute; top: 300px; left: 50%; transform: translateX(-50%); font-family: 'Cormorant Garamond', serif; font-size: 70px;}
+.sec3 h4{position: absolute; top: 510px; left: 50%; transform: translateX(-50%); z-index: 10; font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 400;}
+.contact{position: absolute; top: 580px; left: 50%; transform: translateX(-50%); z-index: 10;}
+.contact #contact-form{width: 500px;}
+.contact #contact-form label{margin: 20px; width: 120px; font-size: 22px; font-family: 'Cormorant Garamond', serif; margin: 50px 20px;}
+.contact #contact-form label:nth-of-type(3){vertical-align: top;}
+.contact #contact-form input{width: 340px; margin-bottom: 15px; border: none; outline: none; background: none; border-bottom: 1px solid #ccc; font-size: 16px; padding-left: 20px; box-sizing: border-box;}
+.contact #contact-form input:nth-of-type(2){margin-left: 25px;}
+.contact #contact-form input:focus{border-bottom: 1px solid #666;}
+.contact #contact-form textarea{width: 340px; height: 300px; margin-left: 30px; border: none; outline: none; background: rgba(255,255,255,0.3); resize: none; font-size: 16px; font-family: 'Noto Sans KR', sans-serif;}
+.contact #contact-form input[type="submit"]{position: absolute; top: 380px; right: 20px; width: 100px; height: 40px; margin-top: 20px; padding-left: 0; border-radius: 25px; border: 1px solid #ccc; font-family: 'Cormorant Garamond', serif; text-transform: uppercase;}
+.contact #contact-form input[type="submit"]:hover{font-weight: bold;}
+
+
+/*mix-blend-mode: difference;*/

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico">
+  <title>다온피부과</title>
+  <link href="https://unpkg.com/swiper@8/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="js/jquery.cookie-1.4.1.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="modal">
+    <img src="img/eventbanner.jpg" alt="6월이벤트안내">
+    <p class="closeWrap">
+      <input type="checkbox" name="expiresChk" id="expiresChk">
+      <label for="expiresChk">하루동안 보지않기</label>
+      <button class="closeBtn">닫기</button>
+    </p>
+  </div>
+  <div class="logo">
+    <a href="#">
+      <img src="img/logo1.png" alt="다온피부과로고">
+    </a>
+  </div>
+  <nav>
+    <ul class="gnb">
+      <li>
+        <a href="#">병원소개</a>
+        <ul class="sub">
+          <li><a href="#">진료시간/오시는길</a></li>
+          <li><a href="#">의료진소개</a></li>
+          <li><a href="#">둘러보기</a></li>
+          <li><a href="#">보유장비</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">대표시술</a>
+        <ul class="sub">
+          <li><a href="#">여드름2달완성</a></li>
+          <li><a href="./treatment1.html">여드름흉터/모공</a></li>
+          <li><a href="#">기미/진피색소세포증</a></li>
+          <li><a href="#">주근깨/잡티/검버섯</a></li>
+          <li><a href="#">홍조/혈관확장</a></li>
+          <li><a href="#">프리미엄제모</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">피부질환클리닉</a>
+        <ul class="sub">
+          <li><a href="#">사마귀/티눈</a></li>
+          <li><a href="#">대상포진</a></li>
+          <li><a href="#">아토피피부염</a></li>
+          <li><a href="#">접촉성피부염/두드러기</a></li>
+          <li><a href="#">건선/백반증</a></li>
+          <li><a href="#">탈모</a></li>
+          <li><a href="#">무좀</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">특수치료클리닉</a>
+        <ul class="sub">
+          <li><a href="#">상처/흉터치료</a></li>
+          <li><a href="#">알레르기/면역치료</a></li>
+          <li><a href="#">외과적수술</a></li>
+          <li><a href="#">점클리닉</a></li>
+          <li><a href="#">난치성사마귀클리닉</a></li>
+          <li><a href="#">혈관기형클리닉</a></li>
+          <li><a href="#">문신제거클리닉</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">안티에이징</a>
+        <ul class="sub">
+          <li><a href="#">스컬트라-콜라겐</a></li>
+          <li><a href="#">슈링크</a></li>
+          <li><a href="#">더블로골드리프팅</a></li>
+          <li><a href="#">엑실리스레이저</a></li>
+          <li><a href="#">보톡스</a></li>
+          <li><a href="#">필러</a></li>
+          <li><a href="#">인모드</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">커뮤니티</a>
+        <ul class="sub">
+          <li><a href="./community.html">공지사항</a></li>
+          <li><a href="#">치료수가표</a></li>
+          <li><a href="#">이벤트</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--모바일용gnb메뉴버튼-->
+    <button type="button" class="btn_menu">
+      <span class="topLine"></span>
+      <span class="middleLine"></span>
+      <span class="bottomLine"></span>
+    </button>
+    <!--모바일용 gnb-->
+    <ul class="m_gnb">
+      <li>
+        <a href="#">병원소개</a>
+        <ul class="sub">
+          <li><a href="#">진료시간/오시는길</a></li>
+          <li><a href="#">의료진소개</a></li>
+          <li><a href="#">둘러보기</a></li>
+          <li><a href="#">보유장비</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">대표시술</a>
+        <ul class="sub">
+          <li><a href="#">여드름2달완성</a></li>
+          <li><a href="./treatment1.html">여드름흉터/모공</a></li>
+          <li><a href="#">기미/진피색소세포증</a></li>
+          <li><a href="#">주근깨/잡티/검버섯</a></li>
+          <li><a href="#">홍조/혈관확장</a></li>
+          <li><a href="#">프리미엄제모</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">피부질환클리닉</a>
+        <ul class="sub">
+          <li><a href="#">사마귀/티눈</a></li>
+          <li><a href="#">대상포진</a></li>
+          <li><a href="#">아토피피부염</a></li>
+          <li><a href="#">접촉성피부염/두드러기</a></li>
+          <li><a href="#">건선/백반증</a></li>
+          <li><a href="#">탈모</a></li>
+          <li><a href="#">무좀</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">특수치료클리닉</a>
+        <ul class="sub">
+          <li><a href="#">상처/흉터치료</a></li>
+          <li><a href="#">알레르기/면역치료</a></li>
+          <li><a href="#">외과적수술</a></li>
+          <li><a href="#">점클리닉</a></li>
+          <li><a href="#">난치성사마귀클리닉</a></li>
+          <li><a href="#">혈관기형클리닉</a></li>
+          <li><a href="#">문신제거클리닉</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">안티에이징</a>
+        <ul class="sub">
+          <li><a href="#">스컬트라-콜라겐</a></li>
+          <li><a href="#">슈링크</a></li>
+          <li><a href="#">더블로골드리프팅</a></li>
+          <li><a href="#">엑실리스레이저</a></li>
+          <li><a href="#">보톡스</a></li>
+          <li><a href="#">필러</a></li>
+          <li><a href="#">인모드</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">커뮤니티</a>
+        <ul class="sub">
+          <li><a href="./community.html">공지사항</a></li>
+          <li><a href="#">치료수가표</a></li>
+          <li><a href="#">이벤트</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <header>
+    <!-- Slider main container -->
+    <div class="swiper swiper0">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide swiper-slide1">
+          <a href="#">
+            <img src="img/headerslideLogo.png" alt="슬라이드이미지">
+          </a>
+        </div>
+        <div class="swiper-slide swiper-slide2">
+          <a href="#">
+            <img src="img/headerslideLogo.png" alt="슬라이드이미지">
+          </a>
+        </div>
+        <div class="swiper-slide swiper-slide3">
+          <a href="#">
+            <img src="img/headerslideLogo.png" alt="슬라이드이미지">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--.swiper0끝-->
+
+    <div class="headerBox_con">
+      <div class="headerBox headerBox1">
+        <h3>진료시간</h3>
+        <img src="img/headerBox1.png" alt="진료시간">
+        <p class="headerText1">
+          월 &nbsp;-&nbsp; 목 &nbsp; AM 09:30 ~ PM 07:00<br>
+          금 요 일 &nbsp; AM 09:30 ~ PM 09:00<br>
+          토 요 일 &nbsp; AM 09:30 ~ PM 02:00<br>
+          점심시간 &nbsp;PM 12:30 ~ PM 02:00<br>
+          <span>
+            - 토요일은 점심시간없이 진료
+          </span>
+        </p>
+      </div>
+      <div class="headerBox headerBox2">
+        <h3>오시는길</h3>
+        <img src="img/headerBox2.png" alt="오시는길">
+        <p class="headerText2">
+          <span>대표번호 053) 641 - 7575</span>
+          대구광역시 달서구 조암로 1 ,<br>
+          미래타워3층<br><br>
+          지하 1층 주차장 주차타워 완비
+        </p>
+      </div>
+    </div>
+  </header>
+  <section class="sec1">
+    <div class="sec1-1">
+      <div class="sec1-1left">
+        <p class="topText topText1">
+          풍부한 임상 <b>경험</b>과<br>
+          개별 치료에 <b>최적화</b>된<br>
+          <b>신뢰도</b> 높은 진료
+        </p>
+        <p class="topText topText2">
+          내원하시는 분들의<br>
+          편의를 위해<b> 금요일 9시</b><br>
+          까지 <b>야간진료</b>를 합니다.
+        </p>
+
+        <div class="introBox introBox1">
+          <img src="img/introBox1.jpg" alt="대표원장님사진">
+          <p class="introText">
+            대표원장<br>
+            <b>차현욱</b> 전문의<br>
+            <a href="#">의료진소개</a>
+          </p>
+        </div>
+        <!--.introBox1끝-->
+        <div class="introBox introBox2">
+          <img src="img/introBox2.jpg" alt="원장님사진">
+          <p class="introText">
+            원장<br>
+            <b>최주희</b>
+            <a href="#">의료진소개</a>
+          </p>
+        </div>
+        <!--.introBox2끝-->
+      </div>
+      <!--sec1-1left끝-->
+      <div class="sec1-1right">
+        <h4>
+          다온의 다양한 오리지널 시술장비<br>
+          <a href="#">view more</a>
+        </h4>
+        <!-- Slider main container -->
+        <div class="swiper swiper1">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="img/swiper1.png" alt="">
+              <p>
+                <span>젠틀맥스프로</span><br><br>
+                <b>달서구 피부과 최초 / 유일</b><br><br>
+                피부 탄력과 색소성 질환<br><br>
+                환자의 상태 맞춤 세부 설정<br>
+                숙련된 전문의에게 시술시<br>
+                시술효과가 극대화됨을<br>
+                기대할 수 있습니다.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/swiper2.png" alt="">
+              <p>
+                <span>LDM</span><br><br>
+                <b>달서구 피부과 최초 / 유일</b><br><br>
+                피부의 자체방어막 증대<br><br>
+                피부재생, 면역시스템을 촉진.<br>
+                새로운 개념의 치료방식으로,<br>
+                히알루론 균형을 잡으며<br>
+                수분탄력을 유지합니다.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/swiper3.png" alt="">
+              <p>
+                <span>리프테라</span><br><br>
+                <b>달서구 피부과 최초 / 유일</b><br><br>
+                콜라겐 재생, 피부 리프팅 효과<br><br>
+                강력한 초음파 에너지를<br>
+                피부 콜라겐층 SMAS층까지<br>
+                침투시켜 자연스럽게<br>
+                피부콜라겐 재생성을 유도.
+              </p>
+            </div>
+            <div class="swiper-slide">
+              <img src="img/swiper4.png" alt="">
+              <p>
+                <span>포토나 QX MAX</span><br><br>
+                <b>고출력 명품레이저</b><br><br>
+                난치성기미잡티, 모공수축<br><br>
+                빔의 크기를 조정하여<br>
+                보다 정확하고, 안전하게<br>
+                국소병변 치료에도 보다<br>
+                업그레이드된 시술효과.
+              </p>
+            </div>
+          </div>
+          <!--  navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+      </div>
+      <!--sec1-1right끝-->
+    </div>
+    <!--sec1-1끝-->
+
+    <div class="sec1-2">
+      <h4>
+        피부과 전문의는 다릅니다<br>
+        정확한 진단, 정확한 치료<br>
+        다온피부과가 함께 하겠습니다.
+      </h4>
+    </div>
+    <!--sec1-2끝-->
+  </section>
+  <section class="sec2">
+    <div class="sec2_con">
+      <ul>
+        <li>
+          <a href="#">
+            <img src="img/sec2List1.png" alt="여드름자국">
+            여드름<br>
+            2달 완성
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/sec2List2.png" alt="여드름흉터">
+            여드름흉터<br>
+            모공
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/sec2List3.png" alt="기미">
+            기미 진피<br>
+            색소세포증
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/sec2List4.png" alt="잡티">
+            주근깨 잡티<br>
+            검버섯
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/sec2List5.png" alt="홍조">
+            홍조<br>
+            혈관확장
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/sec2List6.png" alt="제모">
+            프리미엄<br>
+            제모
+          </a>
+        </li>
+      </ul>
+      <div class="sec2right">
+        <img src="img/sec2Right1.jpg" alt="">
+        <h4>여드름 2달완성</h4>
+        <span>꼼꼼하고 확실한 치료로 여드름 이전의 피부로 돌아갈 수 있습니다.</span>
+        <p>
+          다온 피부과의 올인원 프로그램은 염증성 여드름의 치료 및 예방 뿐만 아니라,<br>
+          여드름 흉터까지 통합적인 치료를 시행합니다.<br>
+          <em>
+            약물치료 · 압출관리 · 레이저압출 · 셀렉 · 브이빔 퍼펙타 등
+          </em>
+        </p>
+        <a href="#">view more</a>
+      </div>
+      <!--sec2right:nth-of-type(1)끝-->
+      <div class="sec2right">
+        <img src="img/sec2Right2.jpg" alt="">
+        <h4>여드름흉터 · 모공</h4>
+        <span>흉터와 모공의 종류에 따른 적절한 치료를 시행합니다.</span>
+        <p>
+          여드름 염증 반응에 의해 표피하부와 진피가 손상을 받으면<br>
+          움푹 파인 여드름 흉터가 생기게 됩니다.<br>
+          <em>
+            TCA도트필링 · 진피절제술 · 레이저박피성형술 · 피코MLA · 시크릿레이저 등
+          </em>
+        </p>
+        <a href="./treatment1.html">view more</a>
+      </div>
+      <!--sec2right:nth-of-type(2)끝-->
+      <div class="sec2right">
+        <img src="img/sec2Right3.jpg" alt="">
+        <h4>기미 · 진피색소세포증</h4>
+        <span>기미와 진피색소세포증은 양상이 유사하여 전문의의 진단이 꼭 필요합니다.</span>
+        <p>
+          단순히 비싼 치료만을 권하지 않습니다. 생활 습관의 교정과<br>
+          꾸준한 관리를 통해 기미를 다스리는 법을 찾아갑니다.<br>
+          <em>
+            레이저토닝 · 미백관리 · 헐리우드 스펙트라 · 피코MLA · 레블라이트 등
+          </em>
+        </p>
+        <a href="#">view more</a>
+      </div>
+      <!--sec2right:nth-of-type(3)끝-->
+      <div class="sec2right">
+        <img src="img/sec2Right4.jpg" alt="">
+        <h4>주근깨 · 잡티 · 검버섯</h4>
+        <span>여러병변이 섞여있여 전문진단하 맞춤 레이저치료로 효과를 볼 수 있습니다.</span>
+        <p>
+          주로 자외선 노출부위에 발생하며 나이가 들면서 발생이 늘어납니다.<br>
+          과증식된 병변을 파괴시키는 레이저치료로 검버섯을 치료합니다.<br>
+          <em>
+            포토나QX MAX · 피코MLA · 1000NAIN · XS다이나마스 · 셀렉 등
+          </em>
+        </p>
+        <a href="#">view more</a>
+      </div>
+      <!--sec2right:nth-of-type(4)끝-->
+      <div class="sec2right">
+        <img src="img/sec2Right5.jpg" alt="">
+        <h4>홍조 · 혈관확장</h4>
+        <span>원인은 만성피부자극에 따른 피부장벽 손상과 염증</span>
+        <p>
+          다온피부과의 올인원 프로그램은 파괴된 피부장벽을 복구하여 근본원인을<br>
+          해결하고 붉어진현상을 치료하여 피부상태개선에 최선을 다합니다.<br>
+          <em>
+            진정보습관리 · 브이빔 퍼펙타 · LDM · 셀렉 · 브이레이저 · 셀렉 등
+          </em>
+        </p>
+        <a href="#">view more</a>
+      </div>
+      <!--sec2right:nth-of-type(5)끝-->
+      <div class="sec2right">
+        <img src="img/sec2Right6.jpg" alt="">
+        <h4>프리미엄 제모</h4>
+        <span>털은 크게 성장-탈락-유지단계를 거칩니다. 모근파괴 시기는 성장기 입니다.</span>
+        <p>
+          제모는 보통 4-6주 간격으로 5회이상 반복해야 효과적으로 제거 할 수 있습니다.<br>
+          털의 굵기나 부위에 따라 치료기간이 달라집니다.<br>
+          <em>
+            젠틀맥스프로: 에너지가 피부 깊숙히 전달되는 알렉산드라이트 롱펄스 장비
+          </em>
+        </p>
+        <a href="#">view more</a>
+      </div>
+      <!--sec2right:nth-of-type(6)끝-->
+    </div>
+    <!--sec2_con-->
+  </section>
+  <section class="sec3">
+    <div class="sec3Title">
+      <h4>
+        <b>DAON CLINIC</b><br>
+        피부질환 · 특수치료 클리닉
+      </h4>
+    </div>
+    <!-- Slider main container -->
+    <div class="swiper swiper2">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide swiper2-slide">
+          <h5>사마귀 · 티눈</h5>
+          <img src="img/sec3-1.jpg" alt="사마귀티눈">
+          <p>
+            <span>재발하지 않도록 꼼꼼한 치료</span><br><br>
+            냉동치료 · 블레오마이신 주사치료<br>
+            브이빔퍼펙타레이저를 이용한 사마귀제거<br>
+            울트라펄스 탄산가스레이저 - 1000NAIN<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>대상포진</h5>
+          <img src="img/sec3-2.jpg" alt="대상포진">
+          <p>
+            <span>신체면역력 증강치료</span><br><br>
+            국소통증조절 주사치료 - 신경회복과 통증경감<br>
+            스마트룩스 SLD치료로 다른피부의 손상은 없이<br>
+            대상포진 예방접종<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>아토피피부염</h5>
+          <img src="img/sec3-3.jpg" alt="아토피피부염">
+          <p>
+            <span>가려움은 이제그만, 세심한 진료</span><br><br>
+            자외선 치료기 - 연고도포후 자외선 노출정도 조절<br>
+            아토피피부염의 원인을 밝혀내고 가능한경우<br>
+            면역치료를 통해 관해를 기대할 수 있습니다<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>건선 · 백반증</h5>
+          <img src="img/sec3-4.jpg" alt="건선백반증">
+          <p>
+            <span>면역세포의 경고신호</span><br><br>
+            광선치료 - 단파장 자외선B 치료 등<br>
+            바르는 약, 증상에 따라 복용약 등을 병행<br>
+            저자극형 레이저 - 팔라스 레이저치료<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>무좀</h5>
+          <img src="img/sec3-5.jpg" alt="무좀">
+          <p>
+            <span>참을 수 없는 손과 발의 가려움증</span><br><br>
+            증상에 따라 복용약, 바르는 약의 병행치료<br>
+            특히 발톱무좀의 경우 대부분 약 복용이 필요<br>
+            핀포인트 레이저 - 효과적인 무좀균 치료시술<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>상처 · 흉터치료</h5>
+          <img src="img/sec3-6.jpg" alt="상처흉터치료">
+          <p>
+            <span>최대한 빠른치료로 흉터를 최소화</span><br><br>
+            흉터예방주사로 추후 발생할 수 있는 흉터를 예방<br>
+            스마트룩스 - 상처치유촉진, 항염증효과, 통증조절<br>
+            브이빔퍼펙타 - 붉은기를 옅게, 흉터를 평평하게<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>알레르기 면역치료</h5>
+          <img src="img/sec3-7.jpg" alt="알레르기">
+          <p>
+            <span>가장 중요한것은 원인물질 파악</span><br><br>
+            정확한 문진과 알레르기피부반응시험과 혈액검사<br>
+            다온피부과 에서는 주사제 방식의<br>
+            면역요법을 시행하고 있습니다.<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>피부외과클리닉</h5>
+          <img src="img/sec3-8.jpg" alt="피부외과클리닉">
+          <p>
+            <span>안전하고 완전한 수술적치료시행</span><br><br>
+            피부에 만져지는 모든 병변에 정확한 진단후,<br>
+            본원 수술 가능 병변에 대해 본원에 구비된<br>
+            시술실에서 수술적 치료를 시행합니다<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>혈관기형클리닉</h5>
+          <img src="img/sec3-9.jpg" alt="혈관기형클리닉">
+          <p>
+            <span>혈관이 과도하게 증식하여 발생하는 질환</span><br><br>
+            붉은점과 혈관확장은 피부확대경을 이용하여<br>
+            정확히 확인후 다온의 브이빔퍼펙타를 이용하여<br>
+            흉터없이 제거할 수 있습니다.<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+        <div class="swiper-slide swiper2-slide">
+          <h5>점클리닉</h5>
+          <img src="img/sec3-10.jpg" alt="점클리닉">
+          <p>
+            <span>피부확대경을 통해 점과 피부암을 구별</span><br><br>
+            피부암 전문병원인 경북대학교병원 피부과 출신의<br>
+            차현욱 원장이 훗날 피부암이 될 수 있는<br>
+            점을 구별합니다.<br>
+          </p>
+          <a href="#">더 알아보기</a>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+  <footer>
+    <div>
+      <img src="img/logo1.png" alt="다온피부과로고">
+      <p>
+        병원명: 다온피부과의원 사업자등록번호 : 353-64-00129 대표: 차현욱<br>
+        대구광역시 달서구 조암로1, 미래타워 3층 다온피부과의원 TEL : 053-641-7575<br>
+        <a href="#">개인정보처리방침</a>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

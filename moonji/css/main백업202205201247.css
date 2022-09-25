@@ -1,0 +1,117 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); /*'Noto Sans KR', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap'); /*'IBM Plex Sans KR', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+/*'Hahmlet', serif;*/
+
+*{margin: 0; padding: 0;}
+body{font:18px 'Noto Sans KR','맑은 고딕','돋움', sans-serif; color:#000; max-width: 1920px;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none; color:#000;}
+
+/*nav, nav-gnb*/
+nav{position:relative; width:100%; height:70px; background: #000; z-index:100;}
+nav .nav_inner{width:1400px; height: 100%; margin:0 auto;}
+nav .nav_inner h1{width:100px; height: 100%; float:left;}
+nav .nav_inner h1 a{display: block; width: 100%; height: 100%; background: url(../img/logo4.png) no-repeat center center; text-indent: -9999px;}
+
+nav .nav_inner .gnb{float: left; height: 100%; margin-left:100px;}
+/*clearfix*/
+nav .nav_inner .gnb::after{display: block; content:''; clear:both;}
+nav .nav_inner .gnb > li{float: left; width:160px; height:100%; }
+nav .nav_inner .gnb > li > a{display: block; width: 100%; height: 100%; text-align:center; line-height:70px; color:#fff; font-size:19px; font-family: 'IBM Plex Sans KR', sans-serif; font-weight:600;}
+nav .nav_inner .gnb > li:hover > a{font-size:20px;}
+
+/*sub*/
+.nav_inner .gnb > li .sub{width: 100%; display: none;}
+.nav_inner .gnb > li .sub > li{width: 100%; height:50px; background: #000; border-bottom:1px solid rgba(129, 129, 129, 0.2);}
+.nav_inner .gnb > li .sub > li:last-child{border-bottom: none;}
+.nav_inner .gnb > li .sub > li > a{display: block; width: 100%; height: 100%; text-align:center; line-height:50px; font-family: 'IBM Plex Sans KR', sans-serif; font-size:18px; color:#fff;}
+.nav_inner .gnb > li .sub > li:hover a{background-color: #0e213f;}
+
+/*header*/
+header{position:relative; width: 100%; height:720px; background: url(../img/header.jpg) no-repeat center center;}
+header h2{position: absolute; top: 35%; left: 20%; font-size: 42px; color:#fff; opacity: 0; animation: h2ani 1s forwards;}
+header h2 span{position: relative; font-size:50px; color:#f5e531;}
+header h2 span::after{position: absolute; bottom: 0 ; left:0; content:''; width: 0; height:1px; background: linear-gradient(110deg, #b0c800, #666, #00426e, rgb(0, 0, 0)); opacity: 0; animation: spanani 1s 1s forwards;}
+header h3{position: absolute; top: 57%; left: 20%; font-weight:500; color:#fff; opacity: 0; animation: h3ani 1.5s 1s forwards;}
+header button{position:relative; top: 60%; left: 20%; width: 150px; height: 40px; outline: none; border: none; border-radius:500px; cursor: pointer; background: rgba(255, 255, 255, 0); color:#fff; font-size:15px; opacity:0;
+animation: buttonani 1.5s 1.5s forwards;}
+header button::before{position: absolute; top: 50%; left: 50%; transform: translate( -50%, -50%); content:''; width: 30px; height: 30px; border-radius: 100%; border: 6px solid rgba(255, 255, 255, 0.2); animation: ring 1.7s infinite;}
+header button:hover{color:#f5e531;}
+
+@keyframes h2ani{
+  50%{top:35%; opacity: 0;}
+  100%{top: 20%; opacity: 1;}
+}
+@keyframes h3ani{
+  50%{top:55%; opacity: 0;}
+  100%{top:40%; opacity: 1;}
+}
+@keyframes spanani{
+  50%{width: 0; opacity: 0;}
+  100%{width: 100%; opacity: 1;}
+}
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+@keyframes buttonani{
+  50%{top: 60%; opacity: 0;}
+  100%{top: 55%; opacity: 1;}
+}
+
+/*section1*/
+.sec1{width: 100%; height:1080px;}
+.sec1-inner{position: relative; margin: 0 auto; width:100%; height: 1080px;}
+.sec1-inner .sec1-1title{position: absolute; top: 50px; margin: 0 auto; font-size: 18px;}
+.sec1-inner .sec1-1title em{margin-right:10px; font-size: 20px; color:#2259b0; font-style: normal;}
+
+.visual{position: relative; top:150px; width: 80%; margin: 0 auto;}
+.visual .slick-slide{text-align: center;}
+.visual .slick-slide img{display: inline-block; width: 150px; height: 225px; transition: all 0.3s;}
+.visual .slick-slide .title1{color: #038bff; font-size:14px; margin-top: 5px;}
+.visual .slick-slide .title2{font-size: 15px; font-weight: 600; margin-top:5px;}
+.visual .slick-slide .title3{color:#777777; font-size: 14px;}
+.visual .slick-slide:hover img{transform:scale(1.05,1.05);}
+.visual .slick-prev{position: absolute; top:35%; left: -40px; width: 48px; height: 48px; background: url(../img/chevron_left_FILL0_wght400_GRAD0_opsz48.png) no-repeat center center; border: none; outline: none; text-indent:-9999px; cursor: pointer;}
+.visual .slick-next{position: absolute; top:35%; right: -40px; width: 48px; height: 48px; background: url(../img/chevron_right_FILL0_wght400_GRAD0_opsz48.png) no-repeat center center; border: none; outline: none; text-indent:-9999px; cursor: pointer;}
+
+.sec1-inner .sec1-2title{position: relative; top: 200px; left: 10%; font-size: 18px;}
+.sec1-inner .sec1-2title em{margin-right:10px; font-size: 20px; color:#0e213f; font-style: normal;}
+
+
+
+
+
+
+/*
+.sec1-inner .sec1-2box1{position: relative; top: 270px; width: 700px; height: 400px; border-radius: 25px; background: rgba(153, 153, 153, 0.2);}
+.sec1-2box1 img{position: absolute; top: 10%; left: 5%;}
+.sec1-2box1 .sec1-2right{position: absolute; top: 10%; right:5%; width: 400px; height: 200px;}
+.sec1-2box1 .sec1-2right:nth-of-type(2){display: none;}
+.sec1-2box1 .sec1-2right:nth-of-type(3){display: none;}
+.sec1-2box1 .sec1-2right:nth-of-type(4){display: none;}
+.sec1-2box1 .sec1-2right .title1{color: #038bff; font-size:14px;}
+.sec1-2box1 .sec1-2right .title2{font-size: 15px; font-weight: 600; margin-top:5px;}
+.sec1-2box1 .sec1-2right .title3{color:#777777; font-size: 14px;}
+.sec1-2box1 .sec1-2right .content1{margin-top: 10px; font-size: 15px;}
+.sec1-2box1 .sec1-2right .content2{margin-top: 5px; color:#777777; font-size: 14px;}
+
+.sec1-2box1 > ul{/*position: absolute; bottom: 10%; right: 10%; width: 380px; height: 130px;}
+.sec1-2box1 > ul > li{position: absolute; display: inline-block;}
+.sec1-2box1 > ul > li > a {display: inline-block;}
+.sec1-2box1 > ul > li > a > img{width: 70px; height: 112px;}
+
+
+.sec1-inner .sec1-2box2{position: absolute; top: 600px; width: 410px; height: 255px; border-radius: 25px;  background: rgba(153, 153, 153, 0.2);}
+.sec1-inner .sec1-2box3{position: absolute; top: 870px; width: 410px; height: 130px; border-radius: 25px; background: rgba(153, 153, 153, 0.2);}
+*/
